@@ -48,9 +48,10 @@ void setupNicheGraphics()
     inkhud->twoWayRocker = true;
 
     // Fonts
-    InkHUD::Applet::fontLarge = FREESANS_9PT_WIN1252;
-    InkHUD::Applet::fontMedium = FREESANS_6PT_WIN1252;
-    InkHUD::Applet::fontSmall = FREESANS_6PT_WIN1252;
+    // Windows-1251 for Cyrillic; InkHUD ignores the OLED_UA flag
+    InkHUD::Applet::fontLarge = FREESANS_9PT_WIN1251;
+    InkHUD::Applet::fontMedium = FREESANS_6PT_WIN1251;
+    InkHUD::Applet::fontSmall = FREESANS_6PT_WIN1251;
 
     // Small display defaults
     inkhud->persistence->settings.rotation = 0;

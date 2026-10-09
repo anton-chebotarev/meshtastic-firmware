@@ -63,9 +63,10 @@ void setupNicheGraphics()
     inkhud->setDisplayResilience(7, 1.5);
 
     // Prepare fonts — use larger sizes to suit the 4.7" screen at ~234 DPI
-    InkHUD::Applet::fontLarge = FREESANS_24PT_WIN1253;
-    InkHUD::Applet::fontMedium = FREESANS_18PT_WIN1253;
-    InkHUD::Applet::fontSmall = FREESANS_12PT_WIN1253;
+    // Windows-1251 for Cyrillic; InkHUD ignores the OLED_UA flag
+    InkHUD::Applet::fontLarge = FREESANS_24PT_WIN1251;
+    InkHUD::Applet::fontMedium = FREESANS_18PT_WIN1251;
+    InkHUD::Applet::fontSmall = FREESANS_12PT_WIN1251;
 
     // Customize default settings
     inkhud->persistence->settings.userTiles.maxCount = 2; // How many tiles can the display handle?

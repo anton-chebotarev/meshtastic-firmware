@@ -72,8 +72,13 @@ class AppletFont
 
 // Cyrillic
 #include "graphics/niche/Fonts/FreeSans12pt_Win1251.h"
+#include "graphics/niche/Fonts/FreeSans18pt_Win1251.h"
+#include "graphics/niche/Fonts/FreeSans24pt_Win1251.h"
 #include "graphics/niche/Fonts/FreeSans6pt_Win1251.h"
 #include "graphics/niche/Fonts/FreeSans9pt_Win1251.h"
+// 24pt and 18pt are rendered from DejaVu Sans, to match the existing Win1253 fonts of those sizes
+#define FREESANS_24PT_WIN1251 InkHUD::AppletFont(FreeSans24pt_Win1251, InkHUD::AppletFont::WINDOWS_1251, -5, 3)
+#define FREESANS_18PT_WIN1251 InkHUD::AppletFont(FreeSans18pt_Win1251, InkHUD::AppletFont::WINDOWS_1251, -4, 2)
 #define FREESANS_12PT_WIN1251 InkHUD::AppletFont(FreeSans12pt_Win1251, InkHUD::AppletFont::WINDOWS_1251, -3, 1)
 #define FREESANS_9PT_WIN1251 InkHUD::AppletFont(FreeSans9pt_Win1251, InkHUD::AppletFont::WINDOWS_1251, -2, -1)
 #define FREESANS_6PT_WIN1251 InkHUD::AppletFont(FreeSans6pt_Win1251, InkHUD::AppletFont::WINDOWS_1251, -1, -2)

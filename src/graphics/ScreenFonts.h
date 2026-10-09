@@ -110,9 +110,16 @@
 #undef FONT_SMALL
 #undef FONT_MEDIUM
 #undef FONT_LARGE
+#ifdef OLED_UA
+// Monospaced_plain_30 is Latin-only; without this Cyrillic shows as accented Latin letters
+#define FONT_SMALL Monospaced_plain_30_UA
+#define FONT_MEDIUM Monospaced_plain_30_UA
+#define FONT_LARGE Monospaced_plain_30_UA
+#else
 #define FONT_SMALL Monospaced_plain_30
 #define FONT_MEDIUM Monospaced_plain_30
 #define FONT_LARGE Monospaced_plain_30
+#endif
 #endif
 
 #define _fontHeight(font) ((font)[1] + 1) // height is position 1

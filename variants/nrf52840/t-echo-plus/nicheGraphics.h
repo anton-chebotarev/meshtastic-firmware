@@ -28,9 +28,10 @@ void setupNicheGraphics()
     InkHUD::InkHUD *inkhud = InkHUD::InkHUD::getInstance();
     inkhud->setDriver(driver);
     inkhud->setDisplayResilience(20, 1.5);
-    InkHUD::Applet::fontLarge = FREESANS_12PT_WIN1252;
-    InkHUD::Applet::fontMedium = FREESANS_9PT_WIN1252;
-    InkHUD::Applet::fontSmall = FREESANS_6PT_WIN1252;
+    // Windows-1251 for Cyrillic; InkHUD ignores the OLED_UA flag
+    InkHUD::Applet::fontLarge = FREESANS_12PT_WIN1251;
+    InkHUD::Applet::fontMedium = FREESANS_9PT_WIN1251;
+    InkHUD::Applet::fontSmall = FREESANS_6PT_WIN1251;
     inkhud->persistence->settings.userTiles.maxCount = 2;
     inkhud->persistence->settings.rotation = 3;
     inkhud->persistence->settings.optionalFeatures.batteryIcon = true;

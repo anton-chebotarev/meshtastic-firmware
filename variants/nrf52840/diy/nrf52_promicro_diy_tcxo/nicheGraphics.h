@@ -57,9 +57,10 @@ void setupNicheGraphics()
     inkhud->setDisplayResilience(INKHUD_BUILDCONF_DISPLAYRESILIENCE); // Suggest roughly ten
 
     // Select fonts
-    InkHUD::Applet::fontLarge = FREESANS_12PT_WIN1252;
-    InkHUD::Applet::fontMedium = FREESANS_9PT_WIN1252;
-    InkHUD::Applet::fontSmall = FREESANS_6PT_WIN1252;
+    // Windows-1251 for Cyrillic; InkHUD ignores the OLED_UA flag
+    InkHUD::Applet::fontLarge = FREESANS_12PT_WIN1251;
+    InkHUD::Applet::fontMedium = FREESANS_9PT_WIN1251;
+    InkHUD::Applet::fontSmall = FREESANS_6PT_WIN1251;
 
     // Init settings, and customize defaults
     // Values ignored individually if found saved to flash
