@@ -138,10 +138,10 @@ const RegionInfo regions[] = {
     RDEF(TH, 920.0f, 925.0f, 10, 0, 27, true, false, false),
 
     /*
-        433,05-434,7 Mhz 10 mW
+        433,05-434,7 Mhz 158 mW (22 dBm)
         https://nkrzi.gov.ua/images/upload/256/5810/PDF_UUZ_19_01_2016.pdf
     */
-    RDEF(UA_433, 433.0f, 434.7f, 10, 0, 10, true, false, false),
+    RDEF(UA_433, 433.0f, 434.7f, 10, 0, 22, true, false, false),
 
     /*
         868,0-868,6 Mhz 25 mW
