@@ -831,6 +831,10 @@ void RadioInterface::applyModemConfig()
 
     power = loraConfig.tx_power;
 
+    // UA_433 allows 22 dBm, but an unset power stays at the previous 10 dBm limit; going higher is an explicit choice
+    if (power == 0 && myRegion->code == meshtastic_Config_LoRaConfig_RegionCode_UA_433)
+        power = 10;
+
     if ((power == 0) || ((power > myRegion->powerLimit) && !devicestate.owner.is_licensed))
         power = myRegion->powerLimit;
 
